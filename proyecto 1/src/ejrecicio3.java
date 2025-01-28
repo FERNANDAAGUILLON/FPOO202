@@ -1,6 +1,8 @@
 import java.util.Scanner;
+
 public class ejrecicio3 {
-    {
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduce un entero X: ");
@@ -16,4 +18,6 @@ public class ejrecicio3 {
         scanner.close();
     }
 }
+
+
 
