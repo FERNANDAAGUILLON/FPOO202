@@ -21,10 +21,11 @@ public class ejercicio2 {
 
         for (String palabra : palabras) {
             if (palabra.length() > 0) {
+            }
+            {
                 resultado.append(palabra.substring(0, 1).toUpperCase()).append(palabra.substring(1).toLowerCase()).append(" ");
             }
         }
-
         return resultado.toString().trim();
     }
 }
