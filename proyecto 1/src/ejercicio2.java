@@ -15,6 +15,7 @@ public class ejercicio2 {
         scanner.close();
     }
 
+
     public static String capitalizarPalabras(String str) {
         String[] palabras = str.split(" ");
         StringBuilder resultado = new StringBuilder();

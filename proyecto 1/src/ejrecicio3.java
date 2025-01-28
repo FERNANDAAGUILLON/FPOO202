@@ -13,6 +13,7 @@ public class ejrecicio3 {
             suma += i;
         }
 
+
         System.out.println("La suma de todos los enteros desde 1 hasta " + x + " es: " + suma);
 
         scanner.close();
