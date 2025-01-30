@@ -18,3 +18,4 @@ public class ejercicio2 {
         scanner.close();
     }
 }
+
