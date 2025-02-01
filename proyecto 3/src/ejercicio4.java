@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class ejercicio4 {
+
 public static void main(String[] args) {
+
     Scanner scanner = new Scanner(System.in);
     System.out.print("Introduce la altura del triángulo (entero positivo): ");
     int altura = scanner.nextInt();
@@ -12,7 +14,11 @@ public static void main(String[] args) {
         for (int j = i; j >= 1; j -= 2) {
             System.out.print(j + " ");
         }
-        System.out.println(); 
+        System.out.println();
     }
 }
+
 }
+
+
+

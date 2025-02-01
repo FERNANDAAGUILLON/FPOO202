@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class ejercicio7 {
-    {
+
         public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce la cantidad de * de la base: ");
@@ -23,7 +23,9 @@ public class ejercicio7 {
         System.out.println("*");
     }
     }
-}
+
+
+
 
 
 
