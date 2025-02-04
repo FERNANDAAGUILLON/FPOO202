@@ -12,7 +12,7 @@ public class PATE2 {
 
             char[] letras = palabra.toCharArray();
             System.out.println("Letras de la palabra:");
-            
+
             for (char letra : letras) {
                 System.out.println(letra);
             }
