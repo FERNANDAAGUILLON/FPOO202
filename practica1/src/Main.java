@@ -6,13 +6,9 @@ public class Main {
     public static void main(String[] args) {
 
 // creamos el primer objeto
-Spartan masterChief= new Spartan();
+Spartan masterChief= new Spartan("john",100,70,"Rifle de asalto");
 
-// usar atributos
-        masterChief.nombre= "john"  ;
-        masterChief.salud=100;
-        masterChief.escudo=70;
-        masterChief.armaPrincipal="Rifle de asalto";
+
 
 // invocamos los metodos
         masterChief.mostrarinfo();
@@ -20,16 +16,18 @@ Spartan masterChief= new Spartan();
         masterChief.recargarArma(75);
         masterChief.correr(true);
 
+// intento del uso de un metodo privado 
+       // masterChief.consultacortana();
+
+        masterChief.setNombre("Maria Fernanda");
+        masterChief.mostrarinfo();
+        System.out.println(masterChief.getNombre());
+
 
 
             // creamos el primer objeto
-            Spartan Chef = new Spartan();
+            Spartan Chef = new Spartan(" pedro" ,100,70,"Espatula");
 
-            // usar atributos
-            Chef.nombre= " pedro"  ;
-            Chef.salud=100;
-            Chef.escudo=70;
-           Chef.armaPrincipal="Espatula";
 
 // invocamos los metodos
             Chef.mostrarinfo();
