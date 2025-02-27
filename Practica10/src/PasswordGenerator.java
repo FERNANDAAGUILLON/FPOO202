@@ -1,30 +1,40 @@
 import java.security.SecureRandom;
-import javax.swing.*;
 
 public class PasswordGenerator {
-        public static final String LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
-        public static final String UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        public static final String SPECIALS = "!@#$%^&*()-_=+<>?";
-        public static final String NUMBERS = "0123456789";
 
-        public static String generatePassword(int length, boolean useUppercase, boolean useSpecials) {
-            String characters = LOWERCASE + NUMBERS;
-            if (useUppercase) characters += UPPERCASE;
-            if (useSpecials) characters += SPECIALS;
+    private static final String MINUSCULAS = "abcdefghijklmnopqrstuvwxyz";
+    private static final String MAYUSCULAS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final String CARACTERES_ESPECIALES = "!@#$%^&*()-_=+<>?";
+    private static final String NUMEROS = "0123456789";
 
-            SecureRandom random = new SecureRandom();
-            StringBuilder password = new StringBuilder();
-            for (int i = 0; i < length; i++) {
-                password.append(characters.charAt(random.nextInt(characters.length())));
-            }
-            return password.toString();
-        }
+    private int longitud;
+    private boolean incluirMayusculas;
+    private boolean incluirEspeciales;
 
-        public static String checkStrength(String password) {
-            if (password.length() >= 12 && password.matches(".*[A-Z].*") && password.matches(".*[!@#$%^&*()-_=+<>?].*"))
-                return "Fuerte";
-            if (password.length() >= 10) return "Media";
-            return "Débil";
-        }
+    public PasswordGenerator ( int longitud, boolean incluirMayusculas, boolean incluirEspeciales) {
+        this.longitud = (longitud < 8) ? 8 : longitud;
+        this.incluirMayusculas = incluirMayusculas;
+        this.incluirEspeciales = incluirEspeciales;
     }
 
+    public String crearContrasena() {
+        String caracteres = MINUSCULAS + NUMEROS;
+        if (incluirMayusculas) caracteres += MAYUSCULAS;
+        if (incluirEspeciales) caracteres += CARACTERES_ESPECIALES;
+
+        SecureRandom random = new SecureRandom();
+        StringBuilder contrasena = new StringBuilder();
+        for (int i = 0; i < longitud; i++) {
+            contrasena.append(caracteres.charAt(random.nextInt(caracteres.length())));
+        }
+        return contrasena.toString();
+    }
+
+    public static String evaluarSeguridad(String contrasena) {
+        if (contrasena.length() >= 12 && contrasena.matches(".*[A-Z].*") && contrasena.matches(".*[!@#$%^&*()-_=+<>?].*")) {
+            return "Fuerte";
+        }
+        if (contrasena.length() >= 10) return "Media";
+        return "Débil";
+    }
+}

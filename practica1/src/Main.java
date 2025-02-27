@@ -16,7 +16,7 @@ Spartan masterChief= new Spartan("john",100,70,"Rifle de asalto");
         masterChief.recargarArma(75);
         masterChief.correr(true);
 
-// intento del uso de un metodo privado 
+// intento del uso de un metodo privado
        // masterChief.consultacortana();
 
         masterChief.setNombre("Maria Fernanda");

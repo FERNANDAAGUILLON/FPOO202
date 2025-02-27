@@ -1,11 +1,11 @@
 import javax.swing.JOptionPane;
 
 public class Cuenta {
+    private String numeroCuenta;
+    private String titular;
+    private int edad;
+    private double saldo;
 
-        private String numeroCuenta;
-        private String titular;
-        private int edad;
-        private double saldo;
 
 
         public Cuenta(String numeroCuenta, String titular, int edad, double saldo) {
@@ -14,6 +14,7 @@ public class Cuenta {
             this.edad = edad;
             this.saldo = saldo;
         }
+
 
         public String getNumeroCuenta() {
             return numeroCuenta;
