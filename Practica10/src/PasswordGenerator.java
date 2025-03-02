@@ -2,9 +2,9 @@ import java.security.SecureRandom;
 
 public class PasswordGenerator {
 
-    private static final String MINUSCULAS = "abcdefghijklmnopqrstuvwxyz";
-    private static final String MAYUSCULAS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private static final String CARACTERES_ESPECIALES = "!@#$%^&*()-_=+<>?";
+    private static final String minusculas = "abcdefghijklmnopqrstuvwxyz";
+    private static final String mayusculas  = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final String caracter_espciales = "!@#$%^&*()-_=+<>?";
     private static final String NUMEROS = "0123456789";
 
     private int longitud;
@@ -18,9 +18,9 @@ public class PasswordGenerator {
     }
 
     public String crearContrasena() {
-        String caracteres = MINUSCULAS + NUMEROS;
-        if (incluirMayusculas) caracteres += MAYUSCULAS;
-        if (incluirEspeciales) caracteres += CARACTERES_ESPECIALES;
+        String caracteres = minusculas + NUMEROS;
+        if (incluirMayusculas) caracteres += mayusculas ;
+        if (incluirEspeciales) caracteres += caracteres _ especiales ;
 
         SecureRandom random = new SecureRandom();
         StringBuilder contrasena = new StringBuilder();
